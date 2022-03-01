@@ -1,0 +1,149 @@
+//header
+
+.header {
+  background-color: #fff;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+
+  img {
+    max-width: 180px;
+  }
+  .t-center {
+    text-align: center;
+  }
+  &__wrapper {
+    text-align: center;
+
+    @media (max-width: $break-md) {
+      text-align: left;
+    }
+  }
+}
+
+.burger {
+  margin-right: 1rem;
+  display: none;
+  button {
+    background-color: #fff;
+    font-size: 3rem;
+  }
+  &__logo {
+    img {
+      @media (max-width: $break-md) {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: $break-md) {
+    display: block;
+  }
+}
+//navigation
+
+.navigation {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    li {
+      a {
+        text-decoration: underline;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        margin: 0 2rem;
+        color: $color-dark;
+
+        span {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+  @media (max-width: $break-md) {
+    display: none;
+  }
+}
+
+//banner
+
+.banner {
+  background-color: $color-primary-d;
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #fff;
+  &__wrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+
+    a {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}
+.bg-banner {
+  width: 100%;
+  background-image: url(./img/banner.jpg);
+  background-repeat: no-repeat, repeat;
+  overflow: hidden;
+  background-size: cover;
+  margin-bottom: 2rem;
+
+  &__wrapper {
+    text-align: center;
+    position: relative;
+    top: 1.1px;
+    font-weight: bolder;
+    h2 {
+      text-transform: uppercase;
+      font-size: 6rem;
+      color: $color-primary-d;
+      line-height: 6rem;
+      span {
+        color: $color-dark;
+      }
+    }
+    p {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: $color-text;
+      font-weight: lighter;
+    }
+  }
+}
+
+//footer
+.contact {
+  text-align: center;
+  &__wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+  &__main {
+    color: $color-text;
+    padding: 1rem;
+    img {
+      max-width: 100px;
+      width: 100%;
+    }
+    svg {
+      fill: $color-primary-d;
+      font-size: 10rem;
+    }
+    h2 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+footer {
+  margin-top: 11rem;
+  background-color: $color-dark;
+  height: 50px;
+}

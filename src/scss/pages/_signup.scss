@@ -1,0 +1,157 @@
+.account {
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: grid;
+  padding: 0 2rem;
+  position: fixed;
+  z-index: 9;
+  min-height: 100vh;
+  place-items: center;
+  background-color: $color-dark;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 360px;
+    min-height: 10vh;
+    padding-bottom: 3rem;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(66, 45, 45, 0.383);
+  }
+  &__header {
+    width: 80%;
+    margin: 0 auto;
+    color: $color-text;
+    img {
+      padding: 4rem 1rem;
+      width: 100%;
+    }
+    h2 {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.fillup {
+  position: relative;
+  margin-bottom: 40px;
+  input {
+    display: block;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    outline: none;
+    margin-top: 2rem;
+    border: 2px solid $color-dark;
+  }
+  label {
+    top: 0.8rem;
+    left: 6px;
+    font-size: 1.5rem;
+    position: absolute;
+    transition: 0.5s ease;
+    pointer-events: none;
+    background-color: #fff;
+  }
+}
+
+.fillup input:focus {
+  border: 2px solid $color-primary-d;
+}
+
+.fillup input:focus + label {
+  color: $color-dark;
+}
+
+.fillup .error-label input:focus + label {
+  color: $color-error;
+}
+.fillup input:valid {
+  border: 2px solid $color-primary-d;
+}
+
+.fillup input:valid + label {
+  color: $color-primary-d;
+}
+
+.fillup input:valid + label {
+  color: $color-primary-d;
+}
+.fillup input:disabled + label,
+.fillup input:focus + label,
+.fillup input:valid + label {
+  top: -8px;
+  font-size: 1.2rem;
+  padding: 0 6px;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.goto-pages {
+  text-align: center;
+  margin-top: 1rem;
+  color: $color-text;
+  font-size: 1.2rem;
+  h3 {
+    margin-top: 1rem;
+    a {
+      margin-left: 5px;
+      span {
+        text-decoration: underline;
+        color: $color-dark;
+        &:hover {
+          color: $color-primary-d;
+        }
+      }
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        text-decoration: underline;
+        color: $color-dark;
+        &:hover {
+          color: $color-primary-d;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  &__btn {
+    width: 100%;
+    color: #fff;
+    padding: 1rem 0;
+    border-radius: 5px;
+    border: none;
+    background-color: $color-primary-d;
+  }
+
+  .create-pass {
+    width: 70%;
+  }
+  button:hover {
+    background-color: darken($color-primary-d, 20%);
+  }
+}
+
+.submit__btn:disabled {
+  background-color: #c8c8c8;
+  pointer-events: none;
+  color: #fff;
+}
